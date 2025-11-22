@@ -262,3 +262,49 @@ Przed rozpoczęciem implementacji należy:
    - W formie prostych pytań tak/nie
    - Lub jako wyraźne zestawy opcji (A, B, C, itp.) do wyboru przez klienta
 3. Przedyskutować wybrane technologie i układ przed implementacją
+
+---
+
+## DECYZJE PROJEKTOWE (Ustalone)
+
+### Hero Section
+✅ **Opcja B - WYBRANA**: Karuzela autoplay z 3 zdjęciami
+- Zdjęcia: 2-produkty/image2.png, 3-montaz/4.png, 2-produkty/image1.jpeg
+- Granatowa nakładka rgba(26, 58, 82, 0.7)
+- Layout: Nazwa + opis po prawej, telefon + email po lewej na dole
+- Swiper.js z autoplay, pagination (dots)
+
+### Karuzela - Biblioteka
+✅ **Swiper.js** - profesjonalna, responsywna, autoplay
+
+### Montaż - Galeria
+✅ **Karuzela średnich miniatur z podglądem**
+- Widoczne: aktualne zdjęcie + 1/2 poprzedniego + 1/2 następnego
+- Autoplay z przejściami
+- Kliknięcie → Lightbox (pełny ekran)
+- Strzałki między zdjęciami = etapy procesu (→)
+- Implementacja: Swiper.js z centeredSlides + lightbox
+
+### Ikony produktów
+✅ **Font Awesome** dla spójności graficznej
+- Jednokomorowy: `fa-square` (1×)
+- Dwukomorowy: `fa-square` (2×)
+- Trzykomorowy: `fa-square` (3×)
+- Stal fi 6: `fa-circle` z "⌀6"
+- Beton B30W8: `fa-cubes`
+- Wodoszczelność: `fa-droplet` lub `fa-shield-halved`
+- Gwarancja: `fa-certificate`
+- Transport: `fa-truck`
+
+### Dodatkowe funkcje
+- ❌ Sekcja procesu zakupu - nie potrzebna
+- ✅ Mapa Google - Bakałarzewo, woj. podlaskie
+- ✅ Kontakt: tylko przyciski mailto: i tel: (bez formularza)
+- ✅ Animacje scroll (AOS) - opisy produktów wjeżdżają z boku
+- ✅ Produkty: 2 kolumny (karty)
+
+### Hosting
+✅ **GitHub Pages** z CNAME dla domeny Cloudflare
+- Szybkie iteracje przez git push
+- Darmowy SSL
+- Custom domain via CNAME

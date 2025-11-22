@@ -1,1 +1,29 @@
+# IDE
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node modules (if needed in future)
+node_modules/
+package-lock.json
+
+# Build files (if needed in future)
+dist/
+build/
+
+# Env files
+.env
+.env.local
+
+# Logs
+*.log
