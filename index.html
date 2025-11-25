@@ -38,10 +38,10 @@
                 </nav>
                 <div class="header-cta">
                     <a href="tel:730944564" class="btn btn-call">
-                        <i class="fas fa-phone"></i> ZADZWOŃ
+                        <i class="fas fa-phone"></i><span> ZADZWOŃ</span>
                     </a>
                     <a href="mailto:bioszamba@bioszamba.pl" class="btn btn-email">
-                        <i class="fas fa-envelope"></i> WYŚLIJ WIADOMOŚĆ
+                        <i class="fas fa-envelope"></i><span> WYŚLIJ WIADOMOŚĆ</span>
                     </a>
                 </div>
             </div>
@@ -69,15 +69,7 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-left">
-                <a href="tel:730944564" class="hero-phone">
-                    <i class="fas fa-phone"></i> 730-944-564
-                </a>
-                <a href="mailto:bioszamba@bioszamba.pl" class="hero-email">
-                    <i class="fas fa-envelope"></i> Napisz do nas
-                </a>
-            </div>
-            <div class="hero-right">
+            <div class="hero-center">
                 <h1>BIOSZAMBA</h1>
                 <p class="hero-subtitle">Zbiorniki Betonowe i Ziemianki</p>
                 <p class="hero-desc">Transport i Montaż</p>
@@ -85,34 +77,47 @@
         </div>
     </section>
 
-    <!-- O firmie - Wizytówka -->
-    <section id="o-nas" class="about">
+    <!-- Zalety -->
+    <section class="advantages">
         <div class="container">
-            <div class="about-cards">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="about-icon">
+            <h2 class="section-title">Dlaczego My?</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="advantage-icon">
                         <i class="fas fa-industry"></i>
                     </div>
-                    <h3>Doświadczony Producent</h3>
-                    <p>Zbiorniki betonowe monolityczne na formach samowibrujących oraz piwniczki ogrodowe</p>
+                    <h3>Własna Produkcja</h3>
+                    <p>Najniższe ceny w regionie bez pośredników</p>
                 </div>
-                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="about-icon">
-                        <i class="fas fa-truck-pickup"></i>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="advantage-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Profesjonalny Montaż</h3>
-                    <p>Kompleksowa usługa transportu i instalacji zbiorników z doświadczonym zespołem</p>
+                    <h3>6 Lat Gwarancji</h3>
+                    <p>Atest i komplet dokumentów do każdego zbiornika</p>
                 </div>
-                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-icon">
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="advantage-icon">
                         <i class="fas fa-truck-fast"></i>
                     </div>
-                    <h3>Szybka Dostawa</h3>
-                    <p>Terminowa dostawa na terenie województwa podlaskiego i okolic</p>
+                    <h3>Transport + Montaż</h3>
+                    <p>Szybka i terminowa dostawa</p>
+                </div>
+                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Jakość B30W8</h3>
+                    <p>Stal fi 6 + preparat wodoszczelny</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="about-description" data-aos="fade-up" data-aos-delay="300">
+    <!-- O firmie - Opis -->
+    <section id="o-nas" class="about">
+        <div class="container">
+            <div class="about-description" data-aos="fade-up" data-aos-delay="0">
                 <h2>Tradycja łączona z nowoczesnością</h2>
                 <p>Bioszamba to doświadczony producent zbiorników betonowych monolitycznych na formach samowibrujących oraz ogrodowych piwniczek ziemnych.</p>
                 <p>Produkcja odbywa się w województwie podlaskim w miejscowości Bakałarzewo – miejscu gdzie tradycja łączy się z nowoczesnymi rozwiązaniami technicznymi.</p>
@@ -277,113 +282,87 @@
     <section id="montaz" class="installation">
         <div class="container">
             <h2 class="section-title">Profesjonalny Transport i Montaż</h2>
-            <p class="section-subtitle">Oferujemy kompleksową usługę transportu i montażu. Nasz doświadczony zespół zadba o każdy etap instalacji zbiornika.</p>
 
-            <div class="installation-steps" data-aos="fade-up">
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-truck"></i></div>
-                    <h4>Transport</h4>
-                    <p>Dostawa na miejsce</p>
+            <div class="installation-content">
+                <!-- Lewa kolumna: kroki procesu -->
+                <div class="installation-steps" data-aos="fade-right">
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-truck"></i></div>
+                        <div class="step-text">
+                            <h4>Transport</h4>
+                            <p>Dostawa na miejsce</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-wrench"></i></div>
+                        <div class="step-text">
+                            <h4>Przygotowanie</h4>
+                            <p>Wykop i fundamenty</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-truck-pickup"></i></div>
+                        <div class="step-text">
+                            <h4>Montaż</h4>
+                            <p>Precyzyjne osadzenie</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="step-text">
+                            <h4>Wykończenie</h4>
+                            <p>Zasypanie i zabezpieczenie</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-wrench"></i></div>
-                    <h4>Przygotowanie</h4>
-                    <p>Wykop i fundamenty</p>
-                </div>
-                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-crane"></i></div>
-                    <h4>Montaż</h4>
-                    <p>Precyzyjne osadzenie</p>
-                </div>
-                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
-                    <h4>Wykończenie</h4>
-                    <p>Zasypanie i zabezpieczenie</p>
-                </div>
-            </div>
 
-            <div class="installation-carousel" data-aos="fade-up" data-aos-delay="200">
-                <div class="swiper installation-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="images/montaz/0.jpeg" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/0.jpeg" alt="Transport zbiorników na ciężarówce">
-                            </a>
+                <!-- Prawa kolumna: karuzela zdjęć -->
+                <div class="installation-carousel" data-aos="fade-left">
+                    <div class="swiper installation-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="images/montaz/0.jpeg" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/0.jpeg" alt="Transport zbiorników na ciężarówce">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/1.jpeg" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/1.jpeg" alt="Żuraw samochodowy przy budynku">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/2.jpeg" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/2.jpeg" alt="Montaż zbiornika na dźwigu">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/3.jpeg" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/3.jpeg" alt="Zamontowany zbiornik przy domu">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/4.png" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/4.png" alt="Zbiornik podczas montażu">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/5.png" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/5.png" alt="Zamontowany zbiornik na terenie leśnym">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/montaz/6.png" class="glightbox" data-gallery="montaz">
+                                    <img src="images/montaz/6.png" alt="Proces montażu - widok z góry">
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/1.jpeg" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/1.jpeg" alt="Żuraw samochodowy przy budynku">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/2.jpeg" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/2.jpeg" alt="Montaż zbiornika na dźwigu">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/3.jpeg" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/3.jpeg" alt="Zamontowany zbiornik przy domu">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/4.png" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/4.png" alt="Zbiornik podczas montażu">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/5.png" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/5.png" alt="Zamontowany zbiornik na terenie leśnym">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="images/montaz/6.png" class="glightbox" data-gallery="montaz">
-                                <img src="images/montaz/6.png" alt="Proces montażu - widok z góry">
-                            </a>
-                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zalety -->
-    <section class="advantages">
-        <div class="container">
-            <h2 class="section-title">Dlaczego My?</h2>
-            <div class="advantages-grid">
-                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="advantage-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Własna Produkcja</h3>
-                    <p>Najniższe ceny w regionie bez pośredników</p>
-                </div>
-                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="advantage-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>6 Lat Gwarancji</h3>
-                    <p>Atest i komplet dokumentów do każdego zbiornika</p>
-                </div>
-                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="advantage-icon">
-                        <i class="fas fa-truck-fast"></i>
-                    </div>
-                    <h3>Transport + Montaż</h3>
-                    <p>Szybka i terminowa dostawa</p>
-                </div>
-                <div class="advantage-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="advantage-icon">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
-                    <h3>Jakość B30W8</h3>
-                    <p>Stal fi 6 + preparat wodoszczelny</p>
                 </div>
             </div>
         </div>
