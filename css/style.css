@@ -128,8 +128,8 @@ a {
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    min-height: 500px;
-    overflow: hidden;
+    min-height: 700px;
+    overflow: visible;
 }
 
 .hero-swiper {
@@ -143,7 +143,7 @@ a {
 
 .hero-swiper .swiper-slide img {
     width: 100%;
-    height: 500px;
+    height: 700px;
     object-fit: cover;
     object-position: center;
 }
@@ -154,7 +154,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--overlay);
+    background: rgba(26, 58, 82, 0.35);
 }
 
 .hero-content {
@@ -173,6 +173,11 @@ a {
 .hero-center {
     text-align: center;
     color: var(--white);
+    background-color: rgba(26, 58, 82, 0.3);
+    padding: 40px 60px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .hero-center h1 {
@@ -203,17 +208,116 @@ a {
     opacity: 1;
 }
 
+/* ===== Wave Separator ===== */
+.wave-separator {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: -1px;
+    line-height: 0;
+}
+
+.wave-separator svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+/* ===== Advantages Section ===== */
+.advantages {
+    padding: 60px 0 80px;
+    background-color: var(--white);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.advantage-card {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-icon {
+    font-size: 56px;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.advantage-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.advantage-card h3 {
+    font-size: 22px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.advantage-card p {
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
 /* ===== About Section ===== */
 .about {
     padding: 80px 0;
-    background-color: var(--light-bg);
+    background-color: var(--white);
 }
 
 .about-description {
-    background-color: var(--white);
+    background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
 }
 
 .about-description h2 {
@@ -584,48 +688,6 @@ a {
     font-size: 32px;
 }
 
-/* ===== Advantages Section ===== */
-.advantages {
-    padding: 80px 0;
-    background-color: var(--white);
-}
-
-.advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.advantage-card {
-    background-color: var(--light-bg);
-    padding: 40px 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px var(--shadow);
-    transition: transform 0.3s;
-}
-
-.advantage-card:hover {
-    transform: translateY(-10px);
-}
-
-.advantage-icon {
-    font-size: 56px;
-    color: var(--accent-blue);
-    margin-bottom: 20px;
-}
-
-.advantage-card h3 {
-    font-size: 22px;
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-}
-
-.advantage-card p {
-    color: var(--text-dark);
-    line-height: 1.8;
-}
-
 /* ===== Contact Section ===== */
 .contact {
     padding: 80px 0;
@@ -747,11 +809,23 @@ a {
     }
 
     .hero {
-        min-height: 400px;
+        min-height: 500px;
     }
 
     .hero-swiper .swiper-slide img {
-        height: 400px;
+        height: 500px;
+    }
+
+    .wave-separator {
+        height: 60px;
+    }
+
+    .wave-separator svg {
+        height: 60px;
+    }
+
+    .hero-center {
+        padding: 30px 40px;
     }
 
     .hero-center h1 {
@@ -814,11 +888,23 @@ a {
     }
 
     .hero {
-        min-height: 350px;
+        min-height: 450px;
     }
 
     .hero-swiper .swiper-slide img {
-        height: 350px;
+        height: 450px;
+    }
+
+    .wave-separator {
+        height: 50px;
+    }
+
+    .wave-separator svg {
+        height: 50px;
+    }
+
+    .hero-center {
+        padding: 25px 30px;
     }
 
     .hero-center h1 {
@@ -911,11 +997,23 @@ a {
     }
 
     .hero {
-        min-height: 300px;
+        min-height: 400px;
     }
 
     .hero-swiper .swiper-slide img {
-        height: 300px;
+        height: 400px;
+    }
+
+    .wave-separator {
+        height: 40px;
+    }
+
+    .wave-separator svg {
+        height: 40px;
+    }
+
+    .hero-center {
+        padding: 20px 25px;
     }
 
     .hero-center h1 {
