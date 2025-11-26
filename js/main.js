@@ -112,10 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
-    // ===== Add loading="lazy" to all images =====
-    document.querySelectorAll('img').forEach(img => {
-        if (!img.hasAttribute('loading')) {
-            img.setAttribute('loading', 'lazy');
-        }
+    // ===== Add loading="lazy" to images without explicit loading attribute =====
+    // Carousel thumbnails and hero images use loading="eager" for immediate display
+    document.querySelectorAll('img:not([loading])').forEach(img => {
+        img.setAttribute('loading', 'lazy');
     });
 });
