@@ -86,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ===== Header Shadow on Scroll =====
-    let lastScroll = 0;
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
@@ -97,23 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
         }
-
-        lastScroll = currentScroll;
     });
 
-    // ===== Mobile Menu Toggle (if needed in future) =====
-    // This is a placeholder for potential mobile hamburger menu
-    const createMobileMenu = () => {
-        const nav = document.querySelector('.nav');
-        const header = document.querySelector('.header-content');
-
-        if (window.innerWidth <= 768) {
-            // Mobile menu logic can be added here if needed
-        }
-    };
-
-    window.addEventListener('resize', createMobileMenu);
-    createMobileMenu();
 
     // ===== Lazy Loading Images Enhancement =====
     if ('loading' in HTMLImageElement.prototype) {
@@ -128,26 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
-    // ===== Add loading="lazy" to all images =====
-    document.querySelectorAll('img').forEach(img => {
-        if (!img.hasAttribute('loading')) {
-            img.setAttribute('loading', 'lazy');
-        }
+    // ===== Add loading="lazy" to images without explicit loading attribute =====
+    // Carousel thumbnails and hero images use loading="eager" for immediate display
+    document.querySelectorAll('img:not([loading])').forEach(img => {
+        img.setAttribute('loading', 'lazy');
     });
-
-    // ===== Console Log for Debugging =====
-    console.log('BIOSZAMBA website initialized successfully');
-    console.log('Hero Swiper:', heroSwiper);
-    console.log('Installation Swiper:', installationSwiper);
-    console.log('GLightbox:', lightbox);
-});
-
-// ===== Performance Monitoring =====
-window.addEventListener('load', () => {
-    // Log page load performance
-    if (window.performance) {
-        const perfData = window.performance.timing;
-        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        console.log(`Page load time: ${pageLoadTime}ms`);
-    }
 });
