@@ -25,6 +25,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 img {
@@ -43,6 +44,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 /* ===== Header ===== */
@@ -128,7 +130,7 @@ a {
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    min-height: 700px;
+    min-height: 550px;
     overflow: visible;
 }
 
@@ -143,9 +145,9 @@ a {
 
 .hero-swiper .swiper-slide img {
     width: 100%;
-    height: 700px;
+    height: 550px;
     object-fit: cover;
-    object-position: center;
+    object-position: 50% 55%;
 }
 
 .hero-overlay {
@@ -229,6 +231,7 @@ a {
     padding: 60px 0 80px;
     background-color: var(--white);
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    overflow-x: hidden;
 }
 
 .advantages-grid {
@@ -297,8 +300,9 @@ a {
 
 /* ===== About Section ===== */
 .about {
-    padding: 80px 0;
+    padding: 0 0 40px 0;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 .about-description {
@@ -361,6 +365,7 @@ a {
 .products {
     padding: 80px 0;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -579,9 +584,13 @@ a {
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     margin-top: 40px;
-    align-items: start;
+    align-items: stretch;
     overflow: hidden;
     max-width: 100%;
+}
+
+.installation {
+    overflow-x: hidden;
 }
 
 .installation-steps {
@@ -646,30 +655,47 @@ a {
     box-shadow: 0 4px 15px var(--shadow);
     overflow: hidden;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .installation-swiper {
     padding: 10px;
     width: 100%;
     max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .installation-swiper .swiper-wrapper {
     max-width: 100%;
+    flex: 1;
 }
 
 .installation-swiper .swiper-slide {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
+}
+
+.installation-swiper .swiper-slide a {
+    width: 333.5px;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .installation-swiper .swiper-slide img {
     width: 100%;
-    max-width: 100%;
-    height: 400px;
+    height: 100%;
+    min-height: 400px;
     object-fit: cover;
-    border-radius: 10px;
+    object-position: center;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -692,6 +718,7 @@ a {
 .contact {
     padding: 80px 0;
     background-color: var(--light-bg);
+    overflow: hidden;
 }
 
 .contact-grid {
@@ -769,8 +796,8 @@ a {
 .contact-map iframe {
     border-radius: 10px;
     width: 100%;
-    height: 100%;
-    min-height: 400px;
+    height: 450px;
+    display: block;
 }
 
 /* ===== Footer ===== */
@@ -847,10 +874,20 @@ a {
     .installation-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        align-items: stretch;
+    }
+
+    .installation-carousel {
+        min-height: 350px;
+    }
+
+    .installation-swiper .swiper-slide a {
+        width: 250px;
     }
 
     .installation-swiper .swiper-slide img {
         height: 300px;
+        min-height: 300px;
     }
 
     .contact-grid {
@@ -884,7 +921,7 @@ a {
     }
 
     .header-cta .btn span {
-        display: none;
+        font-size: 12px;
     }
 
     .hero {
@@ -946,10 +983,11 @@ a {
     .installation-content {
         grid-template-columns: 1fr;
         gap: 20px;
+        align-items: stretch;
     }
 
     .installation-steps {
-        padding: 20px;
+        padding: 20px 70px;
     }
 
     .step-icon {
@@ -958,21 +996,93 @@ a {
         font-size: 20px;
     }
 
+    .installation-carousel {
+        min-height: 300px;
+    }
+
     .installation-swiper {
         padding: 10px;
     }
 
+    .installation-swiper .swiper-slide a {
+        width: 250px;
+    }
+
     .installation-swiper .swiper-slide img {
         height: 250px;
+        min-height: 250px;
+    }
+
+    .advantages {
+        padding: 40px 0 50px;
+    }
+
+    .advantage-card {
+        padding: 15px;
+    }
+
+    .advantage-icon {
+        font-size: 32px;
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .advantage-icon::after {
+        display: none;
+    }
+
+    .advantage-card h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+        margin-top: 0;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: calc(100% - 45px);
+    }
+
+    .advantage-card p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 8px;
     }
 
     .advantages-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .contact-info h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+        font-size: 24px;
+    }
+
+    .highlight-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-box i {
+        font-size: 40px;
+    }
+
+    .contact .section-title {
+        display: none;
     }
 
     .contact-cta .btn {
